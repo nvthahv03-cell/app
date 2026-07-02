@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sáng kiến MathSphere</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .app-phone { width: 320px; height: 600px; border: 12px solid #333; border-radius: 30px; overflow: hidden; background: #fff; }
+        .sheet-box { flex: 1; border: 1px solid #ccc; padding: 20px; background: #f9f9f9; }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <h1 class="text-3xl font-bold mb-6 text-blue-900">Sáng kiến MathSphere: Hệ thống quản lý học tập</h1>
+    
+    <div class="flex gap-8">
+        <!-- Giao diện Mobile App (AppSheet) -->
+        <div class="app-phone shadow-2xl">
+            <div class="bg-blue-800 text-white p-4 text-center font-bold">MathSphere App</div>
+            <div class="p-4 space-y-4">
+                <div class="p-3 border rounded shadow hover:bg-blue-50 cursor-pointer">Lớp 9 - Nộp bài</div>
+                <div class="p-3 border rounded shadow hover:bg-blue-50 cursor-pointer">Lớp 10 - Nộp bài</div>
+                <div class="p-3 border rounded shadow hover:bg-blue-50 cursor-pointer">Lớp 11 - Nộp bài</div>
+                <div class="p-3 border rounded shadow hover:bg-blue-50 cursor-pointer">Tài liệu học tập</div>
+            </div>
+        </div>
+
+        <!-- Bảng điều khiển Google Sheets -->
+        <div class="sheet-box rounded-lg shadow">
+            <h2 class="text-xl font-semibold mb-4 text-green-700">Google Sheets: Dữ liệu đồng bộ (Real-time)</h2>
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-green-100">
+                        <th class="p-2 border">Họ tên học sinh</th>
+                        <th class="p-2 border">Lớp</th>
+                        <th class="p-2 border">Trạng thái bài nộp</th>
+                        <th class="p-2 border">Thời gian</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table">
+                    <tr>
+                        <td class="p-2 border">Nguyễn Văn A</td>
+                        <td class="p-2 border">Lớp 9</td>
+                        <td class="p-2 border text-green-600 font-bold">Đã nộp</td>
+                        <td class="p-2 border">15:00 - 02/07/2026</td>
+                    </tr>
+                    <tr>
+                        <td class="p-2 border">Trần Thị B</td>
+                        <td class="p-2 border">Lớp 10</td>
+                        <td class="p-2 border text-orange-600">Đang chấm</td>
+                        <td class="p-2 border">14:45 - 02/07/2026</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="mt-4 text-sm text-gray-500 italic">Hệ thống tự động cập nhật ngay khi học sinh thao tác trên điện thoại.</p>
+        </div>
+    </div>
+</body>
+</html>
